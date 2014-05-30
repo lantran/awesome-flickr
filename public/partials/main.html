@@ -1,0 +1,62 @@
+<h1>Awesome photos from Flickr</h1>
+<div><h2><span ng-show="text">Results for {{text}}</span></h2></div>
+<div class="row">
+    <div class="col-md-4">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <input class="form-control" id="flickr-search" placeholder="search" ng-model="text"/>
+                <button type="button" class="btn btn-default" id="flickr-search-button" ng-click="search(text)">Search</button>
+            </div>
+        </form>
+    </div>
+    <ul class="col-md-4 pagination">
+        <li ng-repeat="page in pageNav"><a href="" ng-click="search(text, page.number)">{{page.text}}</a></li>
+    </ul>
+    <div class="col-md-2"><p class="pages-of-pages">Page {{page}} of {{pages}}</p></div>
+</div>
+
+<div class="flickr-photos">
+    <div ng-show="loading"><img src="images/loader.gif"></div>
+    <div ng-hide="loading" class="flickr-photo" ng-repeat="photo in photos">
+        <a ng-href="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_b.jpg"
+           title="{{photo.title}}" data-gallery>
+            <img ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_s.jpg">
+        </a>
+    </div>
+</div>
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
