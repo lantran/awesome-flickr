@@ -27,7 +27,7 @@ which title, description or tags contain the text will be returned.
 
 ```
  * Display each photo in a lightbox when you click on individual one. If you click on the 
- photo one more time, then you can see the title and the effect created by Blueimp (It's very nice you
+ photo one more time, then you can see the title and the effect created by blueimp (It's very nice you
  should try it.)  
 
 Happy coding! :)
