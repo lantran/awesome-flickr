@@ -14,12 +14,12 @@ In this project, I use:
 ### Features
 Fortunately, the app can do something for you:
  
- *  Pull and display public photos from Flickr initially 
+ *  Pull and display public photos from Flickr initially. 
 ```
 flickr.photos.getRecent
 Returns a list of the latest public photos uploaded to flickr.
 ```
- * Seaching based on text input
+ * Seaching based on text input. A search with no text input will redirect you to the initial page which latest photos are showed.
 ```
 flickr.photos.search
 Return a list of photos matching some criteria. Only photos visible to the calling user
