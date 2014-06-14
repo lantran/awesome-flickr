@@ -1,7 +1,7 @@
 # Awesome photos from Flickr
 
 This project is my very first attempt to build a web app using JavaScript and related frameworks with Flickr API.
-
+You can see the [demo](http://lantran.github.io/public/#/) here.
 ### Technology stack
 In this project, I use:
 
